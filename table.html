@@ -1,0 +1,161 @@
+<html>
+<body bgcolor="#f5f5f5">
+
+<a href="descriptionONE.html">
+    <button style="color: GREY; border: none; padding: 10px 10px;">Description</button></a>
+
+<a href="first.html">
+    <button style="color: GREY; border: none; padding: 10px 10px;">First</button>
+</a>
+
+<details>
+    <summary> Graph </summary>
+    <form>
+        <p>Значение по оси OX<br>
+            <input  type="radio"  name="Year" value="y"> Year <br>
+            <input  type="radio"  name="Number of views" value="v"> Number of views <br>
+            <input  type="radio"  name="Rating" value="r"> Rating
+        </p>
+        <input type="checkbox" name="Money" value="1"> Money <br>
+        <br><button type="submit" class="complete-botton"> Complete </button>
+    </form>
+</details><br>
+
+<details>
+    <summary> Filter </summary>
+    <form>
+        <label for="movie-name">Movie Name</label>
+        <input type="text" id="movie-name" name="movieName" placeholder="Inception"><br>
+
+        <label>Year (From - To)</label>
+        <input type="number" id="start-year" name="fromYear" placeholder="2000">
+        <input type="number" id="end-year" name="toYear" placeholder="2020"><br>
+
+        <label>Number of Views (From - To)</label>
+        <input type="number" id="start-views" name="fromViews" placeholder="1000000">
+        <input type="number" id="end-views" name="toViews" placeholder="10000000"><br>
+
+        <label>Rating (From - To)</label>
+        <input type="number" id="start-rating" name="fromRating" placeholder="0" step="0.1" min="0" max="10">
+        <input type="number" id="end-rating" name="toRating" placeholder="10" step="0.1" min="0" max="10"><br>
+
+        <button type="submit">Do</button>
+    </form>
+</details><br>
+
+<details>
+    <summary>Sorted</summary>
+    <form id="sortForm">
+        <p>Первый уровень:</p>
+        <select id="firstSort">
+            <option value="2" selected>year</option>
+            <option value="6">Rating</option>
+            <option value="3">Number of views</option>
+        </select>
+
+        <p>Второй уровень:</p>
+        <select id="secondSort">
+            <option value="6" selected>Rating</option>
+            <option value="2">year</option>
+            <option value="3">Number of views</option>
+        </select>
+
+        <p>Третий уровень:</p>
+        <select id="thirdSort">
+            <option value="3" selected>Number of views</option>
+            <option value="2">year</option>
+            <option value="6">Rating</option>
+        </select>
+
+        <br><br>
+        <button type="submit" id="sortedBtn">complete</button>
+    </form>
+</details>
+
+
+<title>Таблица фильмов</title>
+<style>
+    table {
+        width: 75%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 8px;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+
+</style>
+
+<table style="margin-left: 140px;">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Movie name</th>
+        <th>Year</th>
+        <th>Number of views</th>
+        <th>(billion $)</th>
+        <th>Average rating view</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><td>1</td><td>Inception</td><td>2010</td><td>3,200,000</td><td>836</td><td>4.5</td><td>8.8</td></tr>
+    <tr><td>2</td><td>The Dark Knight</td><td>2008</td><td>4,500,000</td><td>1,005</td><td>4.7</td><td>9.0</td></tr>
+    <tr><td>3</td><td>Avatar</td><td>2009</td><td>5,200,000</td><td>2,923</td><td>4.2</td><td>7.8</td></tr>
+    <tr><td>4</td><td>Titanic</td><td>1997</td><td>6,000,000</td><td>2,200</td><td>4.8</td><td>7.9</td></tr>
+    <tr><td>5</td><td>Avengers: Endgame</td><td>2019</td><td>7,000,000</td><td>2,798</td><td>4.6</td><td>8.4</td></tr>
+    <tr><td>6</td><td>Interstellar</td><td>2014</td><td>2,800,000</td><td>677</td><td>4.7</td><td>8.6</td></tr>
+    <tr><td>7</td><td>Joker</td><td>2019</td><td>3,900,000</td><td>1,074</td><td>4.5</td><td>8.4</td></tr>
+    <tr><td>8</td><td>Frozen</td><td>2013</td><td>2,700,000</td><td>1,290</td><td>4.1</td><td>7.4</td></tr>
+    <tr><td>9</td><td>Black Panther</td><td>2018</td><td>4,200,000</td><td>1,346</td><td>4.3</td><td>7.3</td></tr>
+    <tr><td>10</td><td>Spider-Man: No Way Home</td><td>2021</td><td>5,300,000</td><td>1,920</td><td>4.6</td><td>8.3</td></tr>
+    <tr><td>11</td><td>The Lion King</td><td>1994</td><td>4,700,000</td><td>968</td><td>4.9</td><td>8.5</td></tr>
+    <tr><td>12</td><td>Shrek</td><td>2001</td><td>3,100,000</td><td>484</td><td>4.4</td><td>7.9</td></tr>
+    <tr><td>13</td><td>Iron Man</td><td>2008</td><td>3,500,000</td><td>585</td><td>4.6</td><td>7.9</td></tr>
+    <tr><td>14</td><td>The Matrix</td><td>1999</td><td>5,100,000</td><td>467</td><td>4.8</td><td>8.7</td></tr>
+    <tr><td>15</td><td>Forrest Gump</td><td>1994</td><td>6,200,000</td><td>678</td><td>4.9</td><td>8.8</td></tr>
+    <tr><td>16</td><td>The Shawshank Redemption</td><td>1994</td><td>7,400,000</td><td>283</td><td>5.0</td><td>9.3</td></tr>
+    <tr><td>17</td><td>Gladiator</td><td>2000</td><td>4,300,000</td><td>457</td><td>4.7</td><td>8.5</td></tr>
+    <tr><td>18</td><td>Finding Nemo</td><td>2003</td><td>3,200,000</td><td>940</td><td>4.5</td><td>8.2</td></tr>
+    <tr><td>19</td><td>Frozen II</td><td>2019</td><td>2,800,000</td><td>1,450</td><td>4.2</td><td>7.0</td></tr>
+    <tr><td>20</td><td>The Avengers</td><td>2012</td><td>4,600,000</td><td>1,519</td><td>4.5</td><td>8.0</td></tr>
+    <tr><td>21</td><td>Deadpool</td><td>2016</td><td>3,700,000</td><td>783</td><td>4.6</td><td>8.0</td></tr>
+    <tr><td>22</td><td>Harry Potter and the Sorcerer's Stone</td><td>2001</td><td>5,000,000</td><td>974</td><td>4.5</td><td>7.6</td></tr>
+    <tr><td>23</td><td>Star Wars: A New Hope</td><td>1977</td><td>4,200,000</td><td>775</td><td>4.7</td><td>8.6</td></tr>
+    <tr><td>24</td><td>The Godfather</td><td>1972</td><td>6,800,000</td><td>248</td><td>5.0</td><td>9.2</td></tr>
+    <tr><td>25</td><td>Transformers</td><td>2007</td><td>3,200,000</td><td>709</td><td>4.0</td><td>7.1</td></tr>
+    <tr><td>26</td><td>Frozen</td><td>2013</td><td>3,400,000</td><td>1,300</td><td>4.2</td><td>7.5</td></tr>
+    <tr><td>27</td><td>Minions</td><td>2015</td><td>2,900,000</td><td>1,159</td><td>4.1</td><td>6.4</td></tr>
+    <tr><td>28</td><td>Wonder Woman</td><td>2017</td><td>4,100,000</td><td>821</td><td>4.4</td><td>7.4</td></tr>
+    <tr><td>29</td><td>The Hobbit</td><td>2012</td><td>3,800,000</td><td>1,017</td><td>4.3</td><td>7.9</td></tr>
+    <tr><td>30</td><td>The Lego Movie</td><td>2014</td><td>3,200,000</td><td>468</td><td>4.2</td><td>7.7</td></tr>
+    <tr><td>31</td><td>Mad Max: Fury Road</td><td>2015</td><td>3,500,000</td><td>378</td><td>4.6</td><td>8.1</td></tr>
+    <tr><td>32</td><td>Jurassic Park</td><td>1993</td><td>5,800,000</td><td>1,034</td><td>4.8</td><td>8.1</td></tr>
+    <tr><td>33</td><td>Guardians of the Galaxy</td><td>2014</td><td>4,000,000</td><td>772</td><td>4.5</td><td>8.0</td></tr>
+    <tr><td>34</td><td>Parasite</td><td>2019</td><td>3,300,000</td><td>258</td><td>4.8</td><td>8.6</td></tr>
+    <tr><td>35</td><td>It</td><td>2017</td><td>3,700,000</td><td>701</td><td>4.3</td><td>7.3</td></tr>
+    <tr><td>36</td><td>La La Land</td><td>2016</td><td>2,800,000</td><td>447</td><td>4.6</td><td>8.0</td></tr>
+    <tr><td>37</td><td>Up</td><td>2009</td><td>4,100,000</td><td>735</td><td>4.7</td><td>8.2</td></tr>
+    <tr><td>38</td><td>The Social Network</td><td>2010</td><td>3,200,000</td><td>224</td><td>4.5</td><td>7.7</td></tr>
+    <tr><td>39</td><td>Doctor Strange</td><td>2016</td><td>3,900,000</td><td>678</td><td>4.4</td><td>7.5</td></tr>
+    <tr><td>40</td><td>The Revenant</td><td>2015</td><td>2,700,000</td><td>532</td><td>4.5</td><td>8.0</td></tr>
+    <tr><td>41</td><td>Dunkirk</td><td>2017</td><td>2,600,000</td><td>527</td><td>4.6</td><td>7.9</td></tr>
+    <tr><td>42</td><td>Inside Out</td><td>2015</td><td>3,200,000</td><td>857</td><td>4.8</td><td>8.1</td></tr>
+    <tr><td>43</td><td>The Wolf of Wall Street</td><td>2013</td><td>2,900,000</td><td>406</td><td>4.7</td><td>8.2</td></tr>
+    <tr><td>44</td><td>Frozen II</td><td>2019</td><td>3,600,000</td><td>1,450</td><td>4.1</td><td>6.9</td></tr>
+    <tr><td>45</td><td>The Hunger Games</td><td>2012</td><td>4,100,000</td><td>694</td><td>4.4</td><td>7.2</td></tr>
+    <tr><td>46</td><td>Bohemian Rhapsody</td><td>2018</td><td>3,400,000</td><td>903</td><td>4.6</td><td>7.9</td></tr>
+    <tr><td>47</td><td>The Incredibles</td><td>2004</td><td>3,500,000</td><td>633</td><td>4.7</td><td>8.0</td></tr>
+    <tr><td>48</td><td>Wonder Woman 1984</td><td>2020</td><td>2,900,000</td><td>452</td><td>4.1</td><td>5.4</td></tr>
+    <tr><td>49</td><td>Aladdin</td><td>2019</td><td>3,800,000</td><td>1,050</td><td>4.3</td><td>7.1</td></tr>
+    <tr><td>50</td><td>The Great Gatsby</td><td>2013</td><td>2,500,000</td><td>353</td><td>4.5</td><td>7.2</td></tr>
+    </tbody>
+</table>
+
+</body>
+</html>
